@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Group1_Calculator</string>
+    <string name="add">add</string>
+    <string name="clear">Clear</string>
+    <string name="result">result</string>
+    <string name="divide">divide</string>
+    <string name="multiply">multiply</string>
+    <string name="subtract">subtract</string>
+    <string name="enter_number1">enter number</string>
+    <string name="enter_number2">enter number</string>
+</resources>
