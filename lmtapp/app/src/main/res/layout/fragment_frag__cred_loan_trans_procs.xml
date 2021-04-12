@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".frag_CredLoan_transProcs">
+
+
+        <RelativeLayout
+            android:id="@+id/user_info"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_margin="10dp"
+            android:background="#dbf2fd">
+
+            <EditText
+                android:id="@+id/deb_fn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="5dp"
+                android:hint="@string/deb_fn"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/deb_cpnum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/deb_fn"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:hint="@string/deb_cpnum"
+                android:importantForAutofill="no"
+                android:inputType="phone"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/deb_emls"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/deb_cpnum"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:hint="@string/deb_emls"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/deb_adrs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/deb_emls"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="25dp"
+                android:layout_marginLeft="25dp"
+                android:hint="@string/deb_adrs"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:textSize="12sp"
+                tools:ignore="RtlSymmetry" />
+
+        </RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/user_info"
+    android:layout_margin="10dp"
+    android:background="#dbf2fd">
+
+        <LinearLayout
+            android:id="@+id/lay1s"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            android:background="#dbf2fd"
+            >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <Spinner
+        android:id="@+id/proc_loan_edtPeriod"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/spinnerbg"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_gravity="center_vertical"
+         />
+
+
+
+    <EditText
+        android:id="@+id/proc_loan_edtTerm"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/proc_loan_edtTerm"
+        android:importantForAutofill="no"
+        android:textSize="16sp"
+        android:inputType="number" />
+</LinearLayout>
+
+            <EditText
+                android:id="@+id/proc_loan_edtInt"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="@string/proc_loan_edtInt"
+                android:importantForAutofill="no"
+                android:textSize="16sp"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/proc_loan_edtPrinAmount"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:importantForAutofill="no"
+                android:hint="@string/proc_loan_edtPrinAmount"
+                android:textSize="16sp"
+                android:inputType="numberDecimal" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_reset"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_reset"
+            android:layout_marginLeft="50dp"
+            android:layout_marginStart="50dp"
+            android:background="@drawable/btn_corners"
+            tools:ignore="ButtonStyle" />
+            <Button
+                android:id="@+id/btn_process"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_process"
+                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
+                android:background="@drawable/btn_corners"
+                tools:ignore="ButtonStyle" />
+
+
+
+    </LinearLayout>
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/lay1s">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/titleRow_1"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/titleRow_1" />
+
+            <TextView
+                android:id="@+id/txtRow2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/txtRow2" />
+
+            <TextView
+                android:id="@+id/txtRow3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/txtRow3" />
+
+            <TextView
+                android:id="@+id/txtRow4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/txtRow4" />
+
+            <TextView
+                android:id="@+id/txtBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/txtBalance" />
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/list_tableView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <Button
+            android:id="@+id/btn_saveProcess"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/btn_corners"
+            android:text="@string/btn_saveProcess" />
+    </LinearLayout>
+
+
+</RelativeLayout>
+    </RelativeLayout>
+
+
+
